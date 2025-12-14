@@ -23,9 +23,29 @@
 </header>
 <main class="container section"><h1>Contact</h1>
 
-<form class="form" onsubmit="event.preventDefault(); const f=this; const body=`Contact\nName: ${f.name.value}\nPhone: ${f.phone.value}\nMessage: ${f.message.value}`; window.open(waLink(body),'_blank');">
-  <div class="grid"><label>Name<input class="input" required name="name"></label><label>Phone<input class="input" required name="phone"></label></div>
+<form class="form"
+  onsubmit="
+    event.preventDefault();
+    const token = grecaptcha.getResponse();
+    if (!token) { alert('Please confirm you are not a robot.'); return; }
+
+    const f=this;
+    const body=`Contact\nName: ${f.name.value}\nPhone: ${f.phone.value}\nMessage: ${f.message.value}`;
+    window.open(waLink(body),'_blank');
+
+    grecaptcha.reset();
+  "
+>
+  <div class="grid">
+    <label>Name<input class="input" required name="name"></label>
+    <label>Phone<input class="input" required name="phone"></label>
+  </div>
+
   <label>Message<textarea class="input" name="message" rows="4" required></textarea></label>
+
+  <!-- Google reCAPTCHA v2 -->
+  <div class="g-recaptcha" data-sitekey="6LczsSssAAAAALdOqU6O9l5Ef0FIymuMxagjTzIK"></div>
+
   <div class="actions"><button class="btn btn-primary" type="submit">Send via WhatsApp</button></div>
 </form></main>
 <footer class="site-footer">
@@ -47,4 +67,7 @@
     </div>
   </div>
 </footer>
-<script src="./script.js"></script></body></html>
+
+<script src="./script.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body></html>

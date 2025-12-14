@@ -22,11 +22,44 @@
   </div>
 </header>
 <main class="container section"><h1>Book a repair</h1>
-<form name="repair" class="form" onsubmit="event.preventDefault(); const f=this; const body=`Repair request\nName: ${f.name.value}\nWhatsApp: ${f.phone.value}\nDetails: ${f.message.value}`; window.open(waLink(body),'_blank');">
-  <div class="grid"><label>Name<input class="input" required name="name" autocomplete="name"></label><label><label>Phone (WhatsApp)<input class="input" required name="phone" autocomplete="tel"></label></div>
-  <label>Describe the issue<textarea class="input" required name="message" rows="5"></textarea></label>
-  <div class="actions"><button class="btn btn-primary" type="submit">Send via WhatsApp</button></div>
-</form></main>
+<form
+  name="repair"
+  class="form"
+  onsubmit="
+    event.preventDefault();
+    const token = grecaptcha.getResponse();
+    if (!token) { alert('Please confirm you are not a robot.'); return; }
+
+    const f=this;
+    const body=`Repair request\nName: ${f.name.value}\nWhatsApp: ${f.phone.value}\nDetails: ${f.message.value}`;
+    window.open(waLink(body),'_blank');
+
+    grecaptcha.reset();
+  "
+>
+  <div class="grid">
+    <label>Name
+      <input class="input" required name="name" autocomplete="name">
+    </label>
+
+    <label>Phone (WhatsApp)
+      <input class="input" required name="phone" autocomplete="tel">
+    </label>
+  </div>
+
+  <label>Describe the issue
+    <textarea class="input" required name="message" rows="5"></textarea>
+  </label>
+
+  <!-- reCAPTCHA widget -->
+  <div class="g-recaptcha" data-sitekey="6LczsSssAAAAALdOqU6O9l5Ef0FIymuMxagjTzIK"></div>
+
+  <div class="actions">
+    <button class="btn btn-primary" type="submit">Send via WhatsApp</button>
+  </div>
+</form>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</main>
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
