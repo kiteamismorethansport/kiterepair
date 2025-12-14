@@ -1,0 +1,50 @@
+<!doctype html><html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — KiteRepair.pt | Kite & Wing Repairs Algarve</title>
+<meta name="description" content="Contact KiteRepair.pt — fast replies on WhatsApp. Open daily 09:00–19:00."><link rel="canonical" href="https://kiterepair.pt/contact.html">
+<meta property="og:type" content="website"><meta property="og:url" content="https://kiterepair.pt/contact.html">
+<meta property="og:title" content="Contact — KiteRepair.pt | Kite & Wing Repairs Algarve"><meta property="og:description" content="Contact KiteRepair.pt — fast replies on WhatsApp. Open daily 09:00–19:00.">
+<meta property="og:image" content="https://kiterepair.pt/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Contact — KiteRepair.pt | Kite & Wing Repairs Algarve"><meta name="twitter:description" content="Contact KiteRepair.pt — fast replies on WhatsApp. Open daily 09:00–19:00."><meta name="twitter:image" content="https://kiterepair.pt/og-image.jpg">
+<link rel="icon" href="./favicon.svg"><link rel="stylesheet" href="./styles.css?v=33">
+</head>
+<body><header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="./" aria-label="KiteRepair.pt home"><img src="./assets/logo.png" alt="KiteRepair.pt logo"></a>
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="menu" onclick="toggleMenu()">☰</button>
+    <nav id="menu" class="menu">
+      <a href="./index.html">Main</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./contact.html">Contact</a>
+      <a class="btn btn-primary" href="./book.html">Book now</a>
+    </nav>
+  </div>
+</header>
+<main class="container section"><h1>Contact</h1>
+
+<form class="form" onsubmit="event.preventDefault(); const f=this; const body=`Contact\nName: ${f.name.value}\nPhone: ${f.phone.value}\nMessage: ${f.message.value}`; window.open(waLink(body),'_blank');">
+  <div class="grid"><label>Name<input class="input" required name="name"></label><label>Phone<input class="input" required name="phone"></label></div>
+  <label>Message<textarea class="input" name="message" rows="4" required></textarea></label>
+  <div class="actions"><button class="btn btn-primary" type="submit">Send via WhatsApp</button></div>
+</form></main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="./" aria-label="KiteRepair.pt home"><img src="./assets/logo.png" alt="KiteRepair.pt logo"></a>
+      <p class="muted">Fast, reliable kite & wing repairs.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="./index.html">Main</a></li>
+      <li><a href="./book.html">Book repair</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./blog.html">Blog</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-meta">
+      <p>© <span id="year"></span> KiteRepair.pt. All rights reserved.</p>
+      <address>KiteRepair.pt · Algarve, Portugal · <a href="tel:+351963317182">+351 963 317 182</a><br>Open Mon–Sun 09:00–19:00 · WhatsApp available</address>
+    </div>
+  </div>
+</footer>
+<script src="./script.js"></script></body></html>
