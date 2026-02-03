@@ -1,26 +1,51 @@
 [
   {
+    "author": "Tanja",
+    "rating": 5,
+    "text": "Ótimo serviço, 100% recomendável",
+    "time": "2026-02-01",
+    "photo": "assets/slingshot-canopy-repair.jpg"
+  },
+  {
+    "author": "Nadan",
+    "rating": 5,
+    "text": "What great service! Took 3 days from the moment I first messaged till I got the kite (switchblade 12m) back all ready to go (with three pinholes on the leading edge all sealed and fixed). Was picked up and delivered straight to my door. Totally recommend it! Thanks sooooo much!",
+    "time": "2026-01-17",
+    "photo": "assets/bladder-fix.jpg"
+  },
+  {
+    "author": "Moritz",
+    "rating": 5,
+    "text": "Dimitry is extremely responsive and friendly and very fast with his repairs! Definitely recommend.",
+    "time": "2026-01-10",
+    "photo": "assets/Wing-repair.jpg"
+  },
+  {
     "author": "Frank",
     "rating": 5,
     "text": "Fast repair and top quality. Back on the water the next day!",
-    "time": "2025-07-14"
+    "time": "2025-07-14",
+    "photo": "assets/fast-wing-repair.jpg"
   },
   {
     "author": "Luis",
     "rating": 5,
     "text": "Valve replacement was perfect. Great communication.",
-    "time": "2025-05-02"
+    "time": "2025-05-02",
+    "photo": "assets/valve-replacement.jpg"
   },
   {
     "author": "Nick",
     "rating": 5,
     "text": "Clean canopy stitch, barely visible. Highly recommend.",
-    "time": "2025-04-11"
+    "time": "2025-04-11",
+    "photo": "assets/canopy-stitching.jpg"
   },
   {
     "author": "Martyn",
     "rating": 5,
     "text": "Burst strut bladder repaired quickly—great service. Thanks!",
-    "time": "2025-08-10"
+    "time": "2025-08-10",
+    "photo": "assets/kite-bladder-fix.jpg"
   }
 ]

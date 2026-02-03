@@ -20,7 +20,7 @@ async function startWidget(){
       </div>`).join('');
     const slidesEls = Array.from(wrap.querySelectorAll('.slide'));
     slidesEls.forEach((el,i)=>{ const dots=el.querySelector('.dots'); slidesEls.forEach((_,j)=>{const d=document.createElement('div'); d.className='dot'+(j===i?' active':''); dots.appendChild(d);}); });
-    let idx=0; setInterval(()=>{ slidesEls[idx].classList.remove('active'); idx=(idx+1)%slidesEls.length; slidesEls[idx].classList.add('active'); }, 3500);
+    let idx=0; setInterval(()=>{ slidesEls[idx].classList.remove('active'); idx=(idx+1)%slidesEls.length; slidesEls[idx].classList.add('active'); }, 4500);
   }
   try {
     const [photos, reviews] = await Promise.all([
